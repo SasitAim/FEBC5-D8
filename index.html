@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .title{
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- <h1 id="titleText" class="">Hello World</h1>
+  <button onclick="HideElement()">Hellow World will Disappear</button>
+  <div id="greetings">ABC1234</div> -->
+
+  <!-- ต้องการให้ click แล้วเกิด event บางอย่าง ด้วยการเรียกใช้งานฟังก์ชั่น ใช้ onclick กับ buttom และเรียกใช้ฟังก์ชั่นที่ต้องการ สามารถใช้ได้ทั้งแบบ onclick แและอื่นๆ-->
+  
+  <!-- <button onclick="ChangeColor()">This Will Change Color</button>
+  <script src="script.js"></script> -->
+
+  <!-- for click and change color -->
+  <!-- <button id="ChangeBth">This Will Change Color</button> -->
+
+  <!-- Test ปุ่ม Click แล้วข้อความหาย -->
+
+  <!-- <div id="wordtest">Click and hidden</div>
+  <button onclick="HiddenWord()">This Word Will Disappear</button> -->
+
+  
+  <!-- <button onclick="addElement()">Add Element</button>
+  <div id="results">
+    <h1>Hello...</h1>
+  </div>
+  <script>
+    function addElement(){
+      let newElement = document.createElement("p"); // สร้าง <p> ใหม่
+      newElement.innerHTML = "Hello World"; // ใส่ข้อความลงใน <p>
+      let result = document.getElementById('results'); // หาตำแหน้ง div ที่ต้องการเพิ่ม
+      result.appendChild(newElement); // เพิ่ม <p> เข้าไปใน div
+    }
+  </script> -->
+
+
+  <input type="text" name ="" id="todo">
+  <button onclick="CopyName()">Get some words</button>
+  <div id="resultsTest">
+    Your name is...
+  </div>
+  <script>
+    fetch('https://jsonplaceholder.typicode.com/todos')
+      .then(response => response.json())
+      .then(json => console.log(json))
+
+    function CopyName(){
+      let newEL = document.createElement("p"); // ประกาศตัวแปรเพื่อสร้าง p ใหม่
+      newEL.innerHTML = document.getElementById('todo').value; // ใส่ข้อความลงใน p ที่สร้างขึ้น โดยใช้ค่าจาก input type
+      let result02= document.getElementById('resultsTest'); // หาตำแหน่งที่จะใส่ค่า p และเพิ่มค่าเข้าไป โดยอ้างอิงไปที่ id ของ div หรือ p นั้นๆ
+      result02.appendChild(newEL); 
+      document.getElementById("todo").value = "" // กำหนดให้ input เป็นค่าว่าง 
+    }
+  </script>
+
+<!-- Events
+  ทุกๆ Element สามารถมี Event อะไรบางอย่างได้
+-->
+
+<!-- 
+1. เราสามารถสร้าง element ใหม่ได้แล้ว
+2. เราจะเพิ่มข้อความลงใน element ใหม่ที่สร้าง
+3. เราสามารถเรียก element ที่อยากจะเพิ่มข้อมูลได้แล้ว
+4. เพิ่มข้อมูลใหม่ใน element ปลายทาง
+-->
+</body>
+</html>
